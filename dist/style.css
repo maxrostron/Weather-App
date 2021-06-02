@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+  outline: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+
+#main {
+  position: relative;
+  display: flex;
+}
+
+#weatherPhoto {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  filter: brightness(0.3);
+}
+
+#weatherSearch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 2rem;
+  margin-top: 2rem;
+}
+
+#searchBox {
+  border: 1px solid rgba(0, 0, 0, 0.507);
+  border-radius: 0.4rem;
+  min-height: 1.5rem;
+  min-width: 10rem;
+  padding: 3px;
+  padding-left: 8px;
+  margin-bottom: 0.05rem;
+  font-size: 0.9rem;
+}
+
+.errorMsg {
+  font-size: 0.8rem;
+  color: rgba(255, 0, 0, 0.795);
+  opacity: 100%;
+  animation: fadeIn2 0.5s;
+}
+
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0.1;
+    transform: scale(0.9, 0.9);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#weatherResults {
+  position: absolute;
+  top: 30vh;
+  left: 0;
+  margin-left: 7%;
+  min-width: 35rem;
+  min-height: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.conditions {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  color: white;
+}
+
+.location {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  color: white;
+}
+
+.resultLower {
+  display: flex;
+}
+
+.degrees {
+  flex: 1;
+  position: relative;
+  color: white;
+}
+
+.degreeValue {
+  font-size: 9rem;
+  position: relative;
+  margin-right: 2rem;
+}
+
+.degreeValue::after {
+  content: "\00b0 C";
+  font-size: 1.6rem;
+  position: absolute;
+  top: 2rem;
+  left: 9.2rem;
+}
+
+.details {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1.2rem;
+  font-weight: 900;
+  border-left: 0.2rem solid rgba(255, 255, 255, 0.5);
+  line-height: 1.8rem;
+  color: white;
+}
+
+.details > p {
+  margin: 0.3rem;
+}
