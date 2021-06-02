@@ -5,8 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <div id="main">
+      <img id="weatherPhoto" />
+      <form id="weatherSearch">
+        <div id="formGroup">
+          <input type="text" id="searchBox" name="searchBox" />
+          <br />
+          <button id="searchBtn"></button>
+          <span id="errorMsg"></span>
+        </div>
+      </form>
+
+      <div id="weatherResults">
+        <div class="resultUpper">
+          <p class="conditions">MOSTLY SUNNY</p>
+          <h1 class="location">Leeds, United Kingdom</h1>
+        </div>
+
+        <div class="resultLower">
+          <div class="degrees">
+            <p class="degreeValue">69</p>
+          </div>
+
+          <div class="details">
+            <p class="feelsLike">FEELS LIKE: 90C</p>
+            <p class="windSpeed">WIND: 5MPH</p>
+            <p class="humidity">HUMIDITY: 69%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="main.js"></script>
   </body>
 </html>
